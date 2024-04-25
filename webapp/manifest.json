@@ -1,0 +1,129 @@
+{
+  "_version": "1.37.0",
+  "sap.app": {
+    "id": "exed.fiorielments",
+    "type": "application",
+    "i18n": "i18n/i18n.properties",
+    "applicationVersion": {
+      "version": "0.0.1"
+    },
+    "title": "{{appTitle}}",
+    "description": "{{appDescription}}",
+    "resources": "resources.json",
+    "sourceTemplate": {
+      "id": "@sap/generator-fiori:ovp",
+      "version": "1.13.2",
+      "toolsId": "db6a2d1f-8238-40c6-8c8c-c0a59720e233"
+    },
+    "dataSources": {
+      "mainService": {
+        "uri": "/sap/opu/odata/sap/ZZ1_FIORI_ELEMENTS_RFERREI_CDS/",
+        "type": "OData",
+        "settings": {
+          "annotations": [
+            "ZZ1_FIORI_ELEMENTS_RFERREI_C_VAN",
+            "annotation"
+          ],
+          "localUri": "localService/metadata.xml",
+          "odataVersion": "2.0"
+        }
+      },
+      "ZZ1_FIORI_ELEMENTS_RFERREI_C_VAN": {
+        "uri": "/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Annotations(TechnicalName='ZZ1_FIORI_ELEMENTS_RFERREI_C_VAN',Version='0001')/$value/",
+        "type": "ODataAnnotation",
+        "settings": {
+          "localUri": "localService/ZZ1_FIORI_ELEMENTS_RFERREI_C_VAN.xml"
+        }
+      },
+      "annotation": {
+        "type": "ODataAnnotation",
+        "uri": "annotations/annotation.xml",
+        "settings": {
+          "localUri": "annotations/annotation.xml"
+        }
+      }
+    }
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "icons": {
+      "icon": "",
+      "favIcon": "",
+      "phone": "",
+      "phone@2": "",
+      "tablet": "",
+      "tablet@2": ""
+    },
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    }
+  },
+  "sap.ui5": {
+    "flexEnabled": true,
+    "dependencies": {
+      "minUI5Version": "1.96.31",
+      "libs": {
+        "sap.m": {},
+        "sap.ui.core": {},
+        "sap.ushell": {},
+        "sap.f": {},
+        "sap.ui.comp": {},
+        "sap.ui.generic.app": {},
+        "sap.suite.ui.generic.template": {},
+        "sap.ovp": {},
+        "sap.ui.rta": {},
+        "sap.ui.layout": {}
+      }
+    },
+    "contentDensities": {
+      "compact": true,
+      "cozy": true
+    },
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "exed.fiorielments.i18n.i18n"
+        }
+      },
+      "mainModel": {
+        "dataSource": "mainService",
+        "preload": true,
+        "settings": {
+          "defaultBindingMode": "TwoWay",
+          "defaultCountMode": "Inline",
+          "refreshAfterChange": false,
+          "metadataUrlParams": {
+            "sap-value-list": "none"
+          }
+        }
+      },
+      "@i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "uri": "i18n/i18n.properties"
+      }
+    },
+    "resources": {
+      "css": []
+    },
+    "routing": {
+      "config": {},
+      "routes": [],
+      "targets": {}
+    }
+  },
+  "sap.ovp": {
+    "globalFilterModel": "mainModel",
+    "globalFilterEntityType": "ZZ1_FIORI_ELEMENTS_RFERREIType",
+    "containerLayout": "resizable",
+    "enableLiveFilter": true,
+    "considerAnalyticalParameters": false,
+    "cards": {}
+  },
+  "sap.fiori": {
+    "registrationIds": [],
+    "archeType": "analytical"
+  }
+}

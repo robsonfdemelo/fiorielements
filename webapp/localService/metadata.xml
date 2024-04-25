@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData">
+    <edmx:Reference Uri="https://SAPFIORIEXED:44300/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_AGGREGATION',Version='0001',SAP__Origin='LOCAL')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="Org.OData.Aggregation.V1" Alias="Aggregation"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://SAPFIORIEXED:44300/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_ANALYTICS',Version='0001',SAP__Origin='LOCAL')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="com.sap.vocabularies.Analytics.v1" Alias="Analytics"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://SAPFIORIEXED:44300/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_CAPABILITIES',Version='0001',SAP__Origin='LOCAL')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="Org.OData.Capabilities.V1" Alias="Capabilities"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://SAPFIORIEXED:44300/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_CODELIST',Version='0001',SAP__Origin='LOCAL')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="com.sap.vocabularies.CodeList.v1" Alias="SAP__CodeList"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://SAPFIORIEXED:44300/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMON',Version='0001',SAP__Origin='LOCAL')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="com.sap.vocabularies.Common.v1" Alias="Common"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://SAPFIORIEXED:44300/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMUNICATION',Version='0001',SAP__Origin='LOCAL')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="com.sap.vocabularies.Communication.v1" Alias="Communication"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://SAPFIORIEXED:44300/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_MEASURES',Version='0001',SAP__Origin='LOCAL')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="Org.OData.Measures.V1" Alias="Measures"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://SAPFIORIEXED:44300/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_PERSONALDATA',Version='0001',SAP__Origin='LOCAL')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="com.sap.vocabularies.PersonalData.v1" Alias="PersonalData"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://SAPFIORIEXED:44300/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_UI',Version='0001',SAP__Origin='LOCAL')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="com.sap.vocabularies.UI.v1" Alias="UI"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://SAPFIORIEXED:44300/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_VALIDATION',Version='0001',SAP__Origin='LOCAL')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="Org.OData.Validation.V1" Alias="Validation"/>
+    </edmx:Reference>
+    <edmx:DataServices m:DataServiceVersion="2.0">
+        <Schema Namespace="ZZ1_FIORI_ELEMENTS_RFERREI_CDS" xml:lang="en" sap:schema-version="1" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+            <Annotation Term="Core.SchemaVersion" String="1.0.0" xmlns="http://docs.oasis-open.org/odata/ns/edm"/>
+            <EntityType Name="ZZ1_FIORI_ELEMENTS_RFERREIType" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="SAP_UUID"/>
+                </Key>
+                <Property Name="SAP_UUID" Type="Edm.Guid" Nullable="false" sap:label="UUID" sap:quickinfo="16 Byte UUID in 16 Bytes (Raw Format)"/>
+                <Property Name="Usuario" Type="Edm.String" MaxLength="50" sap:label="Text of length 50" sap:heading="" sap:quickinfo=""/>
+                <Property Name="Nome" Type="Edm.String" MaxLength="50" sap:label="Text of length 50" sap:heading="" sap:quickinfo=""/>
+                <Property Name="Email" Type="Edm.String" MaxLength="50" sap:label="Text of length 50" sap:heading="" sap:quickinfo=""/>
+                <Property Name="ProjetoSegw" Type="Edm.String" MaxLength="50" sap:label="Text of length 50" sap:heading="" sap:quickinfo=""/>
+                <Property Name="Cep" Type="Edm.String" MaxLength="50" sap:label="Text of length 50" sap:heading="" sap:quickinfo=""/>
+                <Property Name="Endereco" Type="Edm.String" MaxLength="50" sap:label="Text of length 50" sap:heading="" sap:quickinfo=""/>
+                <Property Name="Bairro" Type="Edm.String" MaxLength="50" sap:label="Text of length 50" sap:heading="" sap:quickinfo=""/>
+            </EntityType>
+            <EntityContainer Name="ZZ1_FIORI_ELEMENTS_RFERREI_CDS_Entities" m:IsDefaultEntityContainer="true" sap:message-scope-supported="true" sap:supported-formats="atom json xlsx">
+                <EntitySet Name="ZZ1_FIORI_ELEMENTS_RFERREI" EntityType="ZZ1_FIORI_ELEMENTS_RFERREI_CDS.ZZ1_FIORI_ELEMENTS_RFERREIType" sap:searchable="true" sap:content-version="1"/>
+                <FunctionImport Name="ZZ1_FIORI_ELEMENTS_RFERREISap_upsert" ReturnType="ZZ1_FIORI_ELEMENTS_RFERREI_CDS.ZZ1_FIORI_ELEMENTS_RFERREIType" EntitySet="ZZ1_FIORI_ELEMENTS_RFERREI" m:HttpMethod="POST">
+                    <Parameter Name="Usuario" Type="Edm.String" Mode="In" MaxLength="50" sap:label="Text of length 50"/>
+                    <Parameter Name="Nome" Type="Edm.String" Mode="In" MaxLength="50" sap:label="Text of length 50"/>
+                    <Parameter Name="Email" Type="Edm.String" Mode="In" MaxLength="50" sap:label="Text of length 50"/>
+                    <Parameter Name="ProjetoSegw" Type="Edm.String" Mode="In" MaxLength="50" sap:label="Text of length 50"/>
+                    <Parameter Name="Cep" Type="Edm.String" Mode="In" MaxLength="50" sap:label="Text of length 50"/>
+                    <Parameter Name="Endereco" Type="Edm.String" Mode="In" MaxLength="50" sap:label="Text of length 50"/>
+                    <Parameter Name="Bairro" Type="Edm.String" Mode="In" MaxLength="50" sap:label="Text of length 50"/>
+                </FunctionImport>
+            </EntityContainer>
+            <Annotations Target="ZZ1_FIORI_ELEMENTS_RFERREI_CDS.ZZ1_FIORI_ELEMENTS_RFERREI_CDS_Entities" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.ApplyMultiUnitBehaviorForSortingAndFiltering" Bool="true"/>
+            </Annotations>
+            <Annotations Target="ZZ1_FIORI_ELEMENTS_RFERREI_CDS.ZZ1_FIORI_ELEMENTS_RFERREIType/Usuario" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Mandatory"/>
+            </Annotations>
+            <Annotations Target="ZZ1_FIORI_ELEMENTS_RFERREI_CDS.ZZ1_FIORI_ELEMENTS_RFERREIType" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.SemanticKey">
+                    <Collection>
+                        <PropertyPath>Usuario</PropertyPath>
+                    </Collection>
+                </Annotation>
+            </Annotations>
+            <atom:link rel="self" href="https://SAPFIORIEXED:44300/sap/opu/odata/sap/ZZ1_FIORI_ELEMENTS_RFERREI_CDS/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
+            <atom:link rel="latest-version" href="https://SAPFIORIEXED:44300/sap/opu/odata/sap/ZZ1_FIORI_ELEMENTS_RFERREI_CDS/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>
